@@ -170,6 +170,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           )
                         ],
                       ),
+
+                      //forgot password
                       CustomButton(
                         size: ButtonSize.small,
                         text: "Forgot Password?",
@@ -177,6 +179,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         isFullWidth: false,
                         onPressed: () {
                           //navigate to forgot screen
+                            Navigator.pushNamed(context, RoutesName.forgotPassword);
                         },
                       ),
                     ],
