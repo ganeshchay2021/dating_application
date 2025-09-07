@@ -1,4 +1,5 @@
 import 'package:dating_application/core/routes/route_name.dart';
+import 'package:dating_application/features/auth/screens/forgot_password_screen.dart';
 import 'package:dating_application/features/auth/screens/login_screen.dart';
 import 'package:dating_application/features/auth/screens/signup_screen.dart';
 import 'package:dating_application/features/matching/screens/discover_screen.dart';
@@ -24,9 +25,13 @@ class AppRouters {
         return MaterialPageRoute(
           builder: (context) => const LoginScreen(),
         );
-        case RoutesName.signUp:
+      case RoutesName.signUp:
         return MaterialPageRoute(
           builder: (context) => const SignupScreen(),
+        );
+      case RoutesName.forgotPassword:
+        return MaterialPageRoute(
+          builder: (context) => const ForgotPasswordScreen(),
         );
       case RoutesName.discover:
         return MaterialPageRoute(
