@@ -2,6 +2,7 @@ import 'package:dating_application/core/routes/route_name.dart';
 import 'package:dating_application/features/auth/screens/forgot_password_screen.dart';
 import 'package:dating_application/features/auth/screens/login_screen.dart';
 import 'package:dating_application/features/auth/screens/signup_screen.dart';
+import 'package:dating_application/features/auth/screens/verification_screen.dart';
 import 'package:dating_application/features/matching/screens/discover_screen.dart';
 import 'package:dating_application/features/onboarding/screen/welcome_screen.dart';
 import 'package:dating_application/features/splash/screens/splash_screen.dart';
@@ -32,6 +33,10 @@ class AppRouters {
       case RoutesName.forgotPassword:
         return MaterialPageRoute(
           builder: (context) => const ForgotPasswordScreen(),
+        );
+        case RoutesName.verification:
+        return MaterialPageRoute(
+          builder: (context) => const VerificationScreen(),
         );
       case RoutesName.discover:
         return MaterialPageRoute(
