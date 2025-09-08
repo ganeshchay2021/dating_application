@@ -10,6 +10,9 @@ void main() async {
 
   try {
     final prefs = await SharedPreferences.getInstance();
+    final hasWelcomeKey= prefs.containsKey("has_seen_welcome");
+    final welcomeValue= prefs.getBool("has_seen_welcome");
+
   } catch (e) {
     debugPrint("SharedPreference initialization error: $e");
   }
