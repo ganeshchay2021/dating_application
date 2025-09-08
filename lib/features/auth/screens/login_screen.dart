@@ -179,7 +179,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         isFullWidth: false,
                         onPressed: () {
                           //navigate to forgot screen
-                            Navigator.pushNamed(context, RoutesName.forgotPassword);
+                          Navigator.pushNamed(
+                              context, RoutesName.forgotPassword);
                         },
                       ),
                     ],
@@ -270,6 +271,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(
                     height: 24,
                   ),
+
+                  //don't have account
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -297,8 +300,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ],
                   )
-
-                  //dont have account
                 ],
               ),
             ),
