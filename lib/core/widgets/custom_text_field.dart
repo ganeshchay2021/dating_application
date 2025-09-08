@@ -1,8 +1,10 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import '../constants/color_constants.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomTextField extends StatefulWidget {
   final TextEditingController controller;
   final String? labelText;
   final String? hintText;
@@ -53,44 +55,52 @@ class CustomTextField extends StatelessWidget {
   });
 
   @override
+  State<CustomTextField> createState() => _CustomTextFieldState();
+}
+
+class _CustomTextFieldState extends State<CustomTextField> {
+  @override
   Widget build(BuildContext context) {
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
     final textColor = isDarkMode ? Colors.white : AppColors.textPrimaryLight;
-    
-    return Container(
-      height: height,
+
+    return SizedBox(
+      height: widget.height,
       child: TextFormField(
-        controller: controller,
-        obscureText: obscureText,
-        enabled: enabled,
-        keyboardType: keyboardType,
-        textInputAction: textInputAction,
-        maxLength: maxLength,
-        maxLines: maxLines,
-        inputFormatters: inputFormatters,
-        onChanged: onChanged,
-        onFieldSubmitted: onSubmitted,
-        focusNode: focusNode,
-        validator: validator,
-        autofocus: autofocus,
-        readOnly: readOnly,
-        onTap: onTap,
+        controller: widget.controller,
+        obscureText: widget.obscureText,
+        enabled: widget.enabled,
+        keyboardType: widget.keyboardType,
+        textInputAction: widget.textInputAction,
+        maxLength: widget.maxLength,
+        maxLines: widget.maxLines,
+        inputFormatters: widget.inputFormatters,
+        onChanged: widget.onChanged,
+        onFieldSubmitted: widget.onSubmitted,
+        focusNode: widget.focusNode,
+        validator: widget.validator,
+        autofocus: widget.autofocus,
+        readOnly: widget.readOnly,
+        onTap: widget.onTap,
         style: TextStyle(color: textColor),
         decoration: InputDecoration(
-          labelText: labelText,
-          hintText: hintText,
-          errorText: errorText,
-          prefixIcon: prefixIcon != null 
+          labelText: widget.labelText,
+          hintText: widget.hintText,
+          errorText: widget.errorText,
+          prefixIcon: widget.prefixIcon != null
               ? Icon(
-                  prefixIcon,
-                  color: isDarkMode ? AppColors.primary : AppColors.primary.withOpacity(0.7),
-                ) 
+                  widget.prefixIcon,
+                  color: isDarkMode
+                      ? AppColors.primary
+                      : AppColors.primary.withOpacity(0.7),
+                )
               : null,
-          suffix: suffix,
-          contentPadding: contentPadding ?? const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          suffix: widget.suffix,
+          contentPadding: widget.contentPadding ??
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
           filled: true,
-          fillColor: isDarkMode 
-              ? Colors.grey.shade800.withOpacity(0.3) 
+          fillColor: isDarkMode
+              ? Colors.grey.shade800.withOpacity(0.3)
               : Colors.grey.shade100.withOpacity(0.7),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12),
