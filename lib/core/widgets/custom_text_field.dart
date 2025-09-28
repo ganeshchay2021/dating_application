@@ -1,7 +1,5 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import '../constants/color_constants.dart';
 
 class CustomTextField extends StatefulWidget {
@@ -11,7 +9,7 @@ class CustomTextField extends StatefulWidget {
   final String? errorText;
   final bool obscureText;
   final bool enabled;
-  final TextInputType keyboardType;
+final TextInputType keyboardType;
   final TextInputAction textInputAction;
   final int? maxLength;
   final int maxLines;
@@ -110,8 +108,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
             borderRadius: BorderRadius.circular(12),
             borderSide: BorderSide(
               color: isDarkMode ? Colors.grey.shade700 : Colors.grey.shade300,
-              width: 1,
-            ),
+              width: 1, 
+            ), 
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12),
