@@ -4,6 +4,8 @@ class RoutesName {
 
   //onboarding route
   static const String welcome = '/welcome';
+  static const String profileSetup = '/profileSetup';
+
 
   //main app route
   static const String discover = '/discover';

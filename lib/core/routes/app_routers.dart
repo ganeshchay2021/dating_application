@@ -4,6 +4,7 @@ import 'package:dating_application/features/auth/screens/login_screen.dart';
 import 'package:dating_application/features/auth/screens/signup_screen.dart';
 import 'package:dating_application/features/auth/screens/verification_screen.dart';
 import 'package:dating_application/features/matching/screens/discover_screen.dart';
+import 'package:dating_application/features/onboarding/screen/profilesetup_screen.dart';
 import 'package:dating_application/features/onboarding/screen/welcome_screen.dart';
 import 'package:dating_application/features/splash/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class AppRouters {
         return MaterialPageRoute(
           builder: (context) => const SplashScreen(),
         );
+
       case RoutesName.welcome:
         return MaterialPageRoute(
           builder: (context) => const WelcomeScreen(),
@@ -26,21 +28,30 @@ class AppRouters {
         return MaterialPageRoute(
           builder: (context) => const LoginScreen(),
         );
+
       case RoutesName.signUp:
         return MaterialPageRoute(
           builder: (context) => const SignupScreen(),
         );
+
       case RoutesName.forgotPassword:
         return MaterialPageRoute(
           builder: (context) => const ForgotPasswordScreen(),
         );
-        case RoutesName.verification:
+
+      case RoutesName.verification:
         return MaterialPageRoute(
           builder: (context) => const VerificationScreen(),
         );
+
       case RoutesName.discover:
         return MaterialPageRoute(
           builder: (context) => const DiscoverScreen(),
+        );
+        
+      case RoutesName.profileSetup:
+        return MaterialPageRoute(
+          builder: (context) => const ProfilesetupScreen(),
         );
 
       default:
