@@ -291,7 +291,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         onPressed: () {
                           //navigate to signup page
-                          Navigator.pushNamed(context, RoutesName.signUp);
+                          Navigator.pushNamedAndRemoveUntil(
+                              context, RoutesName.signUp, (route) => false);
                         },
                         child: const Text(
                           "Sign Up",
