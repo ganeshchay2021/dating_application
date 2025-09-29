@@ -5,6 +5,7 @@ class RoutesName {
   //onboarding route
   static const String welcome = '/welcome';
   static const String profileSetup = '/profileSetup';
+  static const String photoUpload= '/photoUpload';
 
 
   //main app route

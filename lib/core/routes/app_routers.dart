@@ -4,6 +4,7 @@ import 'package:dating_application/features/auth/screens/login_screen.dart';
 import 'package:dating_application/features/auth/screens/signup_screen.dart';
 import 'package:dating_application/features/auth/screens/verification_screen.dart';
 import 'package:dating_application/features/matching/screens/discover_screen.dart';
+import 'package:dating_application/features/onboarding/screen/photo_upload_screen.dart';
 import 'package:dating_application/features/onboarding/screen/profilesetup_screen.dart';
 import 'package:dating_application/features/onboarding/screen/welcome_screen.dart';
 import 'package:dating_application/features/splash/screens/splash_screen.dart';
@@ -52,6 +53,11 @@ class AppRouters {
       case RoutesName.profileSetup:
         return MaterialPageRoute(
           builder: (context) => const ProfilesetupScreen(),
+        );
+
+      case RoutesName.photoUpload:
+        return MaterialPageRoute(
+          builder: (context) => const PhotoUploadScreen(),
         );
 
       default:
